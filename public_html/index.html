@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+    
+              <script>
+function mostrar()
+{
+    
+           
+             var Articulo = document.getElementById('Articulo').value;
+             var Precio = document.getElementById('Precio').value;
+             var Cantidad =document.getElementById('Cantidad').value;
+             var Valor=document.getElementByld("valorc").value;
+             var ValorN = document.getElementById("ValorN").value;
+             var Subtotal = document.getElementById("Subtotalt").value;
+             var ValorN = document.getElementById("valorn").value; 
+             var Itbi  = document.getElementById("Itbi").value; 
+             var Descuento  = document.getElementById("Descuento").value;  
+             
+               Valor = parseFloat(Cantidad) * parseFloat(Precio);
+               Itbi= Valor * 0.18;
+               Subtotal = Valor + Itbi;
+               Descuento = Subtotal * 0.03;
+               ValorN = Subtotal - Descuento;
+          
+             
+  document.getElementById("p1").innerHTML = "su Articulo es: "+Articulo +" "+ Precio;
+  document.getElementById("p2").innerHTML = Precio;
+  document.getElementById("p3").innerHTML = Cantidad;
+  document.getElementById("p4").innerHTML = ValorN; 
+  ocument.getElementById("p5").innerHTML = Descuento;
+                          
+              
+               </script>
+
+<form>
+  Ingrese su Articulo:
+  <input type="text" id="Articulo"><br>
+ 
+  Ingrese su Precio:
+  <input type="text" id="Precio"><br>
+   Ingrese su Cantidad:
+  <input type="text" id="Cantidad"><br>
+  Ingrese su ValorN:
+  <input type="text" id="ValorN"><br>
+  Ingrese su Descuento:
+  <input type="text" id="ValorN"><br>
+  <input type="button" value="calcular" onClick="mostrar()">
+  <input type="button" onclick="mostrar()" value="Reset">
+</form>
+
+
+  
+  <p id="p1"></p>
+  <p id="p2"></p>
+  <p id="p3"></p>
+  <p id="p4"></p>
+  <p id="p5"></p>
+</form>
+    </body>
+</html>
+
